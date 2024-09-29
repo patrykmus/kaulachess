@@ -1,0 +1,117 @@
+main {
+    margin-top: 26px;
+
+    section {
+        position: relative;
+        max-width: 100vw;
+
+        article  {
+            padding-bottom: 30px;
+            h2 {
+                margin-bottom: 16px;
+                font-size: 32px;
+                text-align: center;
+                font-weight: bold;
+            }
+    
+            img {
+                margin: 16px auto;
+                display: block;
+                width: 90%;
+                max-width: 400px;
+            }
+            
+            .article-data {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                .data-box {
+                    display: flex;
+                    color: gray;
+                    h4 {
+                        margin-left: 4px;
+                        font-size: 12px;
+                    }
+                    img {
+                        margin: 0;
+                        width: auto;
+                        height: 1em;
+                    }
+                }
+    
+                a.data-box:hover {
+                    color: #a67c00;
+                }
+            }
+        }
+
+    }
+}
+
+.backward {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color .3s, color .3s;
+        img {
+            margin: 0 6px 0 0;
+            width: auto;
+            height: 1em;
+        }
+}
+.backward:hover {
+    background-color: #a67c00;
+    color: #fff;
+}
+@media (min-width: 600px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 80vw;
+        }
+    }
+}
+@media (min-width: 992px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 60vw;
+        }
+    }
+
+    .backward {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 40vw;
+        }
+    }
+
+    .backward {
+        right: 10vw;
+        font-size: 18px;
+    }
+}
+
+
+@media (min-width: 1600px) {
+    main {
+        section {
+            article {
+                img {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}

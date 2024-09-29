@@ -1,0 +1,105 @@
+main {
+    padding: 0 16px;
+    
+    section {
+        h2 {
+            margin-bottom: 16px;
+            font-size: 26px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .contact-data {
+            margin: 0 auto 16px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            .contact-box {
+                padding: 9px;
+                display: flex;
+                align-items: center;
+                color: #4169e1;
+                fill: #4169e1;
+                font-size: 16px;
+                transition: color .2s;
+                svg {
+                    margin-right: 5px;
+                    width: auto;
+                    height: 1em;
+                }
+            }
+
+            .contact-box:hover {
+                color: #3c096c; 
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    main {
+        padding: 0 16px;
+        
+        section {     
+            .contact-data {
+                margin: 0 auto 16px;
+                display: block;
+
+                .contact-box {
+                    padding: 6px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 80vw;
+
+            p {
+                font-size: 18px;
+            }
+            .contact-data {
+                .contact-box {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 50vw;
+
+            h2 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 20px;
+            }
+
+            .contact-data {
+                .contact-box {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1600px) {
+    main {
+        section {
+            margin: 0 auto;
+            width: 40vw;
+        }
+    }
+}
+

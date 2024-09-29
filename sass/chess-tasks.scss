@@ -1,0 +1,35 @@
+main {
+    section {
+        .cards-group {
+            .article-card {
+                .article-content {
+                    padding: 15px 10px 39px;
+                    h3 {
+                        color: #000;
+                        text-transform: none;
+                    }
+                    .answers {
+                        display: flex;
+                        justify-content: space-evenly;
+                        button {
+                            margin-bottom: 9px;
+                            padding: 5px;
+                            background-color: rgb(250, 247, 231);
+                            color: #a67c00;
+                            font-size: 14px;
+                            font-weight: bold;
+                            border: 1px solid #a67c00;
+                            border-radius: 10px;
+                            transition: background-color .5s, color .5s;
+                        }
+    
+                        button:hover {
+                            background-color: #a67c00;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

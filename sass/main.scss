@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-padding-top: 65px;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #a67c00; 
+    font-weight: bold;
+    z-index: 6;
+
+    img {
+        height: 1em;
+        vertical-align: baseline;
+    }
+    .navbar-brand {
+        font-family: "Poltawski Nowy", serif;
+        font-size: 26px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000;
+        transition: color .2s;
+    }
+    .navbar-nav .nav-link:hover {
+        color: rgba(0, 0, 0, .5);
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        font-weight: 900;
+    }
+}
+
+
+header {
+    .header-img {
+        min-height: calc(80vh - 65px);
+        background-image: url('../img/chess-dark.webp');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+    
+    .header-content {
+        padding: 0 6px 1px; 
+        position: relative;
+        height: calc(80vh - 65px);
+        color: #fff;
+		z-index: 1;
+
+        h1, p {
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            text-align: center;
+        }
+
+        h1 {
+            padding: 0 10px;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            bottom: 10%;
+            transform: translateX(-50%);
+            font-size: 16px;
+        }
+
+        svg {
+            margin-top: 16px;
+            height: 42px;
+            color: #a67c00;
+            transition: color .5s;
+        }
+        svg:hover {
+            color: #d29e02;
+        }
+
+        .highlighted {
+            color: #a67c00;
+            font-weight: bold;
+        }
+
+        .motto {
+            font-size: 110%;
+            letter-spacing: 1px;
+        }
+    }    
+}
+
+main {
+    margin-top: 26px;
+    padding: 0 10px;
+    min-height: calc(100vh - 83px);
+
+    .guide {
+        margin: 0 auto;
+        max-width: 800px;
+
+        .card-group {
+            padding-top: 26px;
+            margin-bottom: 20vh;
+            border-left: 2px solid #a67c00;
+
+            .tcard {
+                padding: 0 20px 26px;
+                position: relative;
+                width: 100%;
+
+                svg {
+                    height: 26px;
+                }
+                a.arrow {
+                    svg {
+                        height: 32px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        transform: translate(-50%, -50%);
+                        color: #a67c00;
+                        transition: background-color .3s;
+                    }
+                    svg:hover {
+                        color: #d29e02;
+                    }
+                }
+
+                h2 {
+                    margin-left: 9px;
+                    display: inline;
+                    color: #a67c00;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: text-decoration .3s;
+                }
+                h2:hover {
+                    color: #d29e02;
+                    text-decoration: underline;
+                }
+                
+                p {
+                    padding: 9px 0 16px 42px;
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    padding: 10px 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border-top: 1px solid #888;
+    
+    .copyright {
+        padding: 31px 0;
+        font-size: 14px;
+        
+        .copySymbol {
+            font-size: 16px;
+        }
+    }
+    .realization {
+        padding-left: 5px;
+        position: absolute;
+        bottom: 0;
+        right: 5px;
+        font-size: 12px;
+        border-left: 1px solid #888;
+    }
+}
+.logo {
+    height: 40px;
+    position: fixed;
+    bottom: 6px;
+    left: 0;
+}
+
+
+@media (max-height: 600px) {
+    header { 
+        .header-img {
+            min-height: calc(100vh - 65px);
+        }    
+        .header-content {  
+            height: calc(100vh - 65px);
+        }
+    }
+}
+@media (max-width: 500px) {
+    header {
+        .header-img {
+            .header-content {
+                h1 {
+                    font-size: 26px;
+                }
+                p {
+                    padding: 0 5px;
+                    bottom: 2%;
+                    font-size: 14px;
+                }
+
+                svg {
+                    padding: 5px;
+                    height: 46px;
+                }
+
+            }
+        }
+    }
+
+    main {
+        .guide {
+            .card-group {
+                .tcard {
+                    a {
+                        h2 {
+                            font-size: 14px;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        bottom: 0;
+    }
+}
+@media (min-width: 500px) {
+    header {
+        .header-img {
+            .header-content {
+                h1 {
+                    font-size: 42px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    nav {
+        .bars-solid {
+            height: 1.2em;
+        }
+    
+        .navbar-toggler {
+            border: none;
+        }
+    
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }    
+    }
+
+    header {
+        .header-img {
+            background-image: url('../img/chess-dark-mobile.webp');
+        }
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    footer {
+        margin-top: 110px;
+        padding-bottom: 26px;
+    }
+}
+
+@media (min-width: 992px) {
+    header { 
+        .header-img {
+            min-height: calc(100vh - 65px);
+        }    
+        .header-content {  
+            height: calc(100vh - 65px);
+        }
+    }
+
+    main {
+        .guide { 
+            .card-group {
+                .tcard {
+                    padding-top: 26px;
+                    h2, p {
+                        font-size: 18px;
+                    }                    
+                    img {
+                        height: 36px;
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        .guide { 
+            .card-group {
+                .tcard {
+                    h2, p {
+                        font-size: 20px;
+                    }                    
+                    img {
+                        height: 36px;
+                    }
+                }
+            }
+    
+        }
+    }
+    .logo {
+        height: 50px;
+    }
+}
